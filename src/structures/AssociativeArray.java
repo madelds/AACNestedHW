@@ -32,7 +32,7 @@ public class AssociativeArray<K, V> {
   /**
    * The array of key/value pairs.
    */
-  KVPair<K, V> pairs[];
+  public KVPair<K, V> pairs[];
 
   // +--------------+------------------------------------------------
   // | Constructors |
@@ -168,5 +168,25 @@ public class AssociativeArray<K, V> {
     }
     return -1; // Key not found.
   } // find(K)
+
+  /**
+   * Get an array of all keys in the associative array.
+   */
+  public K[] getKeys() {
+    K[] keys = (K[]) new Object[size]; // Create an array to hold the keys
+
+    for (int i = 0; i < size; i++) {
+        keys[i] = pairs[i].key;
+    }
+
+  return keys;
+}
+
+  /**
+   * Retrieves the key at the index of the array.
+   */
+  public K retrieveKey(int index){
+    return this.pairs[index].key;
+  }
 
 } // class AssociativeArray
