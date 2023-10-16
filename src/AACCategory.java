@@ -8,7 +8,6 @@ import structures.KeyNotFoundException;
  * of the category.
  *
  * @author Madel Sibal
- * @author Samuel A. Rebelsky
  */
 
 public class AACCategory {
